@@ -1,0 +1,48 @@
+name: 'Draw keymaps'
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config*/*.keymap'
+      - 'includes/*.dtsi'
+      - '.github/workflows/draw_keymaps.yml'
+
+jobs:
+  draw_leon:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
+    with:
+      keymap_patterns: "config/corne.keymap"         # path to the keymaps to parse
+      config_path: "config/corne.yaml"               # config file, ignored if not exists
+      output_folder: "images"                              # path to save produced SVG and keymap YAML files
+      destination: "artifact"
+      draw_args: "corne:'-k corne_rotated -l LAYOUT_split_3x6_3'"
+      artifact_name: "corne"
+
+  commit:
+    needs: [draw_leon]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download artifact
+        id: download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          path: images
+
+      - name: Rename artifacts
+        run: |
+          mv images/corne/corne.svg images/corne.svg
+          rm -rf images/corne/
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'keymap-drawer render'
+          commit_options: ""
+          push_options: ""
+          skip_fetch: false
+          file_pattern: 'images/*.svg'
