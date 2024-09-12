@@ -247,7 +247,7 @@
         default_layer {
             bindings = <
 &hm N0 TAB  &td_qm  &hm NUMBER_1 W  &hm NUMBER_2 E      &hm NUMBER_3 R  &hm NUMBER_4 T    &hm N5 Y   &hm NUMBER_6 U     &hm N7 I            &hm N8 O  &hm N9 P               &hm LA(BSPC) BSPC
-&kp ESC     &kp A   &kp S           &kp D               &kp F           &kp G             &kp H      &kp J              &kp K               &td_lvt   &hm RS(SEMICOLON) SQT  &hm LC(E) ENTER
+&kp ESC     &kp A   &hm LA(S) S     &kp D               &kp F           &kp G             &kp H      &kp J              &kp K               &td_lvt   &hm RS(SEMICOLON) SQT  &hm LC(E) ENTER
 &kp LSHFT   &kp Z   &kp X           &kp C               &td_vt          &kp B             &kp N      &kp M              &hm RCTRL COMMA     &kp DOT   &hm BSLH FSLH          &hm RIGHT_SHIFT MINUS
                                     &htl LOWER DEFAULT  &kp LCMD        &kp SPACE         &kp ENTER  &hm LA(BSPC) BSPC  &htl RAISE DEFAULT
             >;
