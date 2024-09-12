@@ -74,21 +74,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_QM";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&input_qm>;
+            bindings = <&kp Q>, <&double_q>, <&input_qm>;
         };
 
         td_lvt: td_lvt {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LVT";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&input_lvt>;
+            bindings = <&kp L>, <&double_l>, <&input_lvt>;
         };
 
         td_vt: td_vt {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_VT";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&input_vt>;
+            bindings = <&kp V>, <&double_v>, <&input_vt>;
         };
     };
 
@@ -135,24 +135,6 @@
             timeout-ms = <30>;
             key-positions = <30 31>;
             bindings = <&kp RIGHT_PARENTHESIS>;
-        };
-
-        combo_umlaut_big_A {
-            bindings = <&umlaut_big_A>;
-            key-positions = <24 13>;
-            layers = <1 2>;
-        };
-
-        combo_umlaut_big_U {
-            bindings = <&umlaut_big_U>;
-            key-positions = <24 7>;
-            layers = <1 2>;
-        };
-
-        combo_umlaut_big_O {
-            bindings = <&umlaut_big_O>;
-            key-positions = <24 9>;
-            layers = <1 2>;
         };
     };
 
@@ -234,6 +216,27 @@
             bindings = <&kp LS(L) &kp E &kp O &kp N &kp SPACE &kp V &kp O &kp N &kp SPACE &kp LS(T) &kp I &kp P &kp P &kp E &kp L &kp S &kp K &kp I &kp R &kp C &kp H>;
             label = "INPUT_LVT";
         };
+
+        double_l: double_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp L>;
+            label = "DOUBLE_L";
+        };
+
+        double_v: double_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp V>;
+            label = "DOUBLE_V";
+        };
+
+        double_q: double_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp Q>;
+            label = "DOUBLE_Q";
+        };
     };
 
     // cheat-sheet https://peccu.github.io/zmk-cheat-sheet/
@@ -245,7 +248,7 @@
             bindings = <
 &hm N0 TAB  &td_qm  &hm NUMBER_1 W  &hm NUMBER_2 E      &hm NUMBER_3 R  &hm NUMBER_4 T    &hm N5 Y   &hm NUMBER_6 U     &hm N7 I            &hm N8 O  &hm N9 P               &hm LA(BSPC) BSPC
 &kp ESC     &kp A   &kp S           &kp D               &kp F           &kp G             &kp H      &kp J              &kp K               &td_lvt   &hm RS(SEMICOLON) SQT  &hm LC(E) ENTER
-&kp LSHFT   &kp Z   &kp X           &kp C               &td_vt          &kp B             &kp N      &kp M              &kp COMMA           &kp DOT   &hm BSLH FSLH          &hm RIGHT_SHIFT MINUS
+&kp LSHFT   &kp Z   &kp X           &kp C               &td_vt          &kp B             &kp N      &kp M              &hm RCTRL COMMA     &kp DOT   &hm BSLH FSLH          &hm RIGHT_SHIFT MINUS
                                     &htl LOWER DEFAULT  &kp LCMD        &kp SPACE         &kp ENTER  &hm LA(BSPC) BSPC  &htl RAISE DEFAULT
             >;
         };
