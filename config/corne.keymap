@@ -184,6 +184,8 @@
             #binding-cells = <0>;
             bindings = <&kp L &kp L>;
             label = "DOUBLE_L";
+            wait-ms = <10>;
+            tap-ms = <10>;
         };
 
         double_v: double_v {
