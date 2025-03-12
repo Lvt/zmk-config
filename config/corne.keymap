@@ -55,7 +55,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -98,43 +98,53 @@
         combo_brace_left {
             timeout-ms = <30>;
             key-positions = <15 16>;
-            bindings = <&kp LEFT_BRACE>;
+            bindings = <&kp LA(N7)>;
         };
 
         combo_bracket_left {
             timeout-ms = <30>;
             key-positions = <16 17>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LA(NUMBER_8)>;
         };
 
         combo_bracket_right {
             timeout-ms = <30>;
             key-positions = <18 19>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp LA(N9)>;
         };
 
         combo_brace_right {
             timeout-ms = <30>;
             key-positions = <19 20>;
-            bindings = <&kp RIGHT_BRACE>;
+            bindings = <&kp LA(N0)>;
         };
 
         combo_pipe {
             timeout-ms = <30>;
             key-positions = <27 28>;
-            bindings = <&kp PIPE>;
+            bindings = <&kp LA(GRAVE)>;
         };
 
         combo_parenthesis_left {
             timeout-ms = <30>;
             key-positions = <28 29>;
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp LS(N8)>;
         };
 
         combo_parenthesis_right {
             timeout-ms = <30>;
             key-positions = <30 31>;
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp LS(NUMBER_9)>;
+        };
+
+        backlash {
+            bindings = <&kp LA(MINUS)>;
+            key-positions = <31 32>;
+        };
+
+        option {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <38 37>;
         };
     };
 
@@ -199,7 +209,7 @@
         default_layer {
             bindings = <
 &hm LS(LG(TAB)) LG(TAB)  &td_qm     &kp W        &kp E               &kp R     &kp T        &kp Y      &hm LEFT_BRACKET U  &kp I               &hm SEMICOLON O  &kp P          &kp BSPC
-&kp ESC                  &hm SQT A  &hm MINUS S  &kp D               &kp F     &kp G        &kp H      &kp J               &kp K               &td_lvt          &kp SEMICOLON  &kp ENTER
+&kp ESC                  &hm SQT A  &hm MINUS S  &kp D               &kp F     &kp G        &kp H      &kp J               &kp K               &td_lvt          &kp SEMICOLON  &kp LA(ENTER)
 &kp LSHFT                &kp Z      &kp X        &kp C               &td_vt    &kp B        &kp N      &kp M               &hm RCTRL COMMA     &kp DOT          &kp SLASH      &hm RIGHT_SHIFT MINUS
                                                  &htl LOWER DEFAULT  &kp LCMD  &kp SPACE    &kp ENTER  &kp RIGHT_GUI       &htl RAISE DEFAULT
             >;
@@ -207,9 +217,9 @@
 
         lower_layer {
             bindings = <
-&kp TAB         &none      &none  &kp LC(E)           &none     &kp LC(T)    &kp N7        &kp N8        &kp N9              &none  &none  &kp DEL
-&kp ESC         &kp LC(A)  &none  &kp LC(D)           &none     &none        &kp NUMBER_4  &kp N5        &kp NUMBER_6        &none  &none  &none
-&kp LEFT_SHIFT  &kp LC(Z)  &none  &kp LC(C)           &none     &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &none  &none  &kp RIGHT_SHIFT
+&kp TAB         &none      &none  &kp LC(E)           &none     &kp LC(T)    &kp N7        &kp N8        &kp N9              &kp ASTERISK  &none  &kp DEL
+&kp ESC         &kp LC(A)  &none  &kp LC(D)           &none     &none        &kp NUMBER_4  &kp N5        &kp NUMBER_6        &kp MINUS     &none  &none
+&kp LEFT_SHIFT  &kp LC(Z)  &none  &kp LC(C)           &none     &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &kp PLUS      &none  &kp RIGHT_SHIFT
                                   &htl LOWER DEFAULT  &kp LCMD  &kp SPACE    &kp ENTER     &kp N0        &htl RAISE DEFAULT
             >;
         };
