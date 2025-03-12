@@ -198,9 +198,9 @@
 
         default_layer {
             bindings = <
-&hm LS(LG(TAB)) LG(TAB)  &td_qm     &kp W        &kp E               &kp R     &kp T        &kp Y      &hm LEFT_BRACKET U  &kp I               &kp O    &kp P          &kp BSPC
-&kp ESC                  &hm SQT A  &hm MINUS S  &kp D               &kp F     &kp G        &kp H      &kp J               &kp K               &td_lvt  &kp SEMICOLON  &kp ENTER
-&kp LSHFT                &kp Z      &kp X        &kp C               &td_vt    &kp B        &kp N      &kp M               &hm RCTRL COMMA     &kp DOT  &kp SLASH      &hm RIGHT_SHIFT MINUS
+&hm LS(LG(TAB)) LG(TAB)  &td_qm     &kp W        &kp E               &kp R     &kp T        &kp Y      &hm LEFT_BRACKET U  &kp I               &hm SEMICOLON O  &kp P          &kp BSPC
+&kp ESC                  &hm SQT A  &hm MINUS S  &kp D               &kp F     &kp G        &kp H      &kp J               &kp K               &td_lvt          &kp SEMICOLON  &kp ENTER
+&kp LSHFT                &kp Z      &kp X        &kp C               &td_vt    &kp B        &kp N      &kp M               &hm RCTRL COMMA     &kp DOT          &kp SLASH      &hm RIGHT_SHIFT MINUS
                                                  &htl LOWER DEFAULT  &kp LCMD  &kp SPACE    &kp ENTER  &kp RIGHT_GUI       &htl RAISE DEFAULT
             >;
         };
