@@ -146,6 +146,16 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <38 37>;
         };
+
+        double_quote {
+            bindings = <&kp LS(NUMBER_2)>;
+            key-positions = <6 7>;
+        };
+
+        single_quote {
+            bindings = <&kp RS(HASH)>;
+            key-positions = <5 4>;
+        };
     };
 
     conditional_layers {
@@ -183,7 +193,7 @@
             label = "INPUT_LVT";
             wait-ms = <10>;
             tap-ms = <10>;
-       };
+        };
 
         double_l: double_l {
             compatible = "zmk,behavior-macro";
