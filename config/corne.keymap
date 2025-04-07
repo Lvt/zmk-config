@@ -156,8 +156,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(Q) &kp U &kp A &kp R &kp T &kp E &kp T &kp T &kp SPACE &kp M &kp O &kp B &kp I &kp L &kp E>;
             label = "INPUT_QM";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         input_vt: input_vt {
@@ -165,8 +165,8 @@
             #binding-cells = <0>;
             bindings = <&kp V &kp O &kp N &kp SPACE &kp LS(T) &kp I &kp P &kp P &kp E &kp L &kp S &kp K &kp I &kp R &kp C &kp H>;
             label = "INPUT_VT";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         input_lvt: input_lvt {
@@ -174,8 +174,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(L) &kp E &kp O &kp N &kp SPACE &kp V &kp PERIOD &kp SPACE &kp LS(T) &kp I &kp P &kp P &kp E &kp L &kp S &kp K &kp I &kp R &kp C &kp H>;
             label = "INPUT_LVT";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         double_l: double_l {
@@ -183,8 +183,8 @@
             #binding-cells = <0>;
             bindings = <&kp L &kp L>;
             label = "DOUBLE_L";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         double_v: double_v {
@@ -192,8 +192,8 @@
             #binding-cells = <0>;
             bindings = <&kp V &kp V>;
             label = "DOUBLE_V";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         double_q: double_q {
@@ -201,8 +201,8 @@
             #binding-cells = <0>;
             bindings = <&kp Q &kp Q>;
             label = "DOUBLE_Q";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         move_left: move_left {
