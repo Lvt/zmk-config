@@ -27,7 +27,6 @@
 
 / {
     behaviors {
-
         htl: hold_tab_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAB_LAYER";
@@ -37,7 +36,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&to>;
         };
-
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -242,10 +240,10 @@
 
         lower_layer {
             bindings = <
-&kp TAB         &none      &none  &kp LC(E)           &none     &kp LC(T)    &kp N7        &kp N8        &kp N9              &kp ASTERISK  &none  &kp DEL
-&kp ESC         &kp LC(A)  &none  &kp LC(D)           &none     &none        &kp NUMBER_4  &kp N5        &kp NUMBER_6        &kp MINUS     &none  &none
-&kp LEFT_SHIFT  &kp LC(Z)  &none  &kp LC(C)           &none     &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &kp PLUS      &none  &kp RIGHT_SHIFT
-                                  &htl LOWER DEFAULT  &kp LCMD  &kp SPACE    &kp ENTER     &kp N0        &htl RAISE DEFAULT
+&kp TAB         &none      &kp LC(W)  &kp LC(E)           &none      &kp LC(T)    &kp N7        &kp N8        &kp N9              &kp ASTERISK  &none  &kp DEL
+&kp ESC         &kp LC(A)  &none      &kp LC(D)           &none      &none        &kp NUMBER_4  &kp N5        &kp NUMBER_6        &kp MINUS     &none  &none
+&kp LEFT_SHIFT  &kp LC(Z)  &none      &kp LC(C)           &kp LC(V)  &none        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &kp PLUS      &none  &kp RIGHT_SHIFT
+                                      &htl LOWER DEFAULT  &kp LCMD   &kp SPACE    &kp ENTER     &kp N0        &htl RAISE DEFAULT
             >;
         };
 
