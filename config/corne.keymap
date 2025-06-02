@@ -181,7 +181,7 @@
         screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(NUMBER_4)) SPACE>;
+            bindings = <&kp LG(LS(NUMBER_4)) SPACE &kp SPACE>;
             label = "screenshot";
             wait-ms = <50>;
             tap-ms = <50>;
